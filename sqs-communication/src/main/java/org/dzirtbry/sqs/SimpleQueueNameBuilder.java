@@ -1,4 +1,4 @@
-package org.dzirtbry;
+package org.dzirtbry.sqs;
 
 import org.springframework.stereotype.Component;
 

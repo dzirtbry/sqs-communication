@@ -24,7 +24,6 @@ public class ProxieClientFactory implements ClientFactory {
 
     @SuppressWarnings("unchecked")
     public <T> T getClient(Class<T> clazz) {
-
         return (T) Proxy.newProxyInstance(clazz.getClassLoader(), new Class[]{clazz}, invocationHandler);
     }
 }

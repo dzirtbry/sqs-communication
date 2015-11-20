@@ -3,7 +3,7 @@ package org.dzirtbry.server;
 import com.amazonaws.services.sqs.AmazonSQS;
 import com.amazonaws.services.sqs.model.Message;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.dzirtbry.QueueNameBuilder;
+import org.dzirtbry.sqs.QueueNameBuilder;
 import org.dzirtbry.annotations.CallableService;
 import org.dzirtbry.sqs.LongPollingSqsConsumer;
 import org.dzirtbry.sqs.QueueManger;
