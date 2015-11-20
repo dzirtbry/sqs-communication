@@ -1,6 +1,7 @@
 package org.dzirtbry.client;
 
 import org.dzirtbry.service.DummyService;
+import org.dzirtbry.service.RequestObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -34,6 +35,12 @@ public class ServiceClientRunner {
 //        dummyService.bar("I-don't-know-what-I'm doing");
 
         dummyService.rar(10, -10L, "stststs");
+
+
+        RequestObject requestObject = new RequestObject();
+        requestObject.setTest1("tetete");
+        requestObject.setTest2(222);
+        dummyService.cac(requestObject);
 
     }
 

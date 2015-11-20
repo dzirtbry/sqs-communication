@@ -1,6 +1,7 @@
 package org.dzirtbry.server;
 
 import org.dzirtbry.service.DummyService;
+import org.dzirtbry.service.RequestObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -42,5 +43,9 @@ public class DummyServiceImpl implements DummyService {
 
     public void rar(int a, long b, String c) {
         System.out.println(a + " - " + b + " - " + c);
+    }
+
+    public void cac(RequestObject requestObject) {
+        System.out.println(requestObject);
     }
 }

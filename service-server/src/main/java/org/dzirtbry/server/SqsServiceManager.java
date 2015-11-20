@@ -88,7 +88,7 @@ public class SqsServiceManager implements ServiceManager {
 
         public boolean onMessage(Message message) throws Exception {
             String body = message.getBody();
-            String[] strings = objectMapper.readValue(body, String[].class);
+            Object[] strings = objectMapper.readValue(body, Object[].class);
 
             Class[] parameterTypes = method.getParameterTypes();
             Object[] parameters = new Object[parameterTypes.length];
@@ -97,7 +97,7 @@ public class SqsServiceManager implements ServiceManager {
                 if (parameterTypes[i].equals(String.class)) {
                     parameters[i] = strings[i];
                 } else {
-                    parameters[i] = objectMapper.readValue(strings[i], parameterTypes[i]);
+                    parameters[i] = objectMapper.readValue(objectMapper.writeValueAsString(strings[i]), parameterTypes[i]);
                 }
             }
 

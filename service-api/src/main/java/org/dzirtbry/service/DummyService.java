@@ -19,4 +19,6 @@ public interface DummyService {
 
     void rar(int a, long b, String c);
 
+    void cac(RequestObject requestObject);
+
 }
